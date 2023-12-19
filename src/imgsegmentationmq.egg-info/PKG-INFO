@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: imgsegmentationmq
-Version: 1.2.1
+Version: 1.2.2
 Summary: Image segmentation package
 Author: Daniel Díaz-Roncero González
 Classifier: Programming Language :: Python :: 3
@@ -35,14 +35,22 @@ To import all the algorithms to your script run the following line:
 
 from imgsegmentationmq import *
 
-Once you have run the previous line, you can start using the algorithms by using the respective calls:
+Once you have run the previous line, you can start using the algorithms by using the respective calls:  
+
     For the k-means algorithm:
+
         imgsegmentationmq.means.kmeans(k,image, max_it, init_centroids)
+
     For the c-means algorithm:
+
         imgsegmentationmq.means.kmeans(k,image,m,max_it,init_centroids)
+
     For the k-quantile algorithm:
+
         imgsegmentationmq.means.kmeans(k,image,k1,k2,max_it,init_centroids)
+
     For the c-quantile algorithm:
+    
         imgsegmentationmq.means.kmeans(k,image,m,k1,k2, max_it, init_centroids)
 
 Please make sure you have the arguments in the appropiate form. Specifically note that to use these algorithms
