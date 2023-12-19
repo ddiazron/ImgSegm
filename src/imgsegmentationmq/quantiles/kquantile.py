@@ -51,8 +51,8 @@ def kquantile(k,image,k1,k2,max_it=100,init_centroids=None):
     if(k1 <= 0 or k2 <= 0):
         raise ValueError('k1 and k2 must be greater than 0')
     
-    if(max_it <= 1):
-        raise ValueError('The number of maximum iterations must be greater than 1')
+    if(max_it <= 0):
+        raise ValueError('The number of maximum iterations must be greater than 0')
     
     if(len(image.shape) != 3):
         raise ValueError('The image must have 3 dimensions (length,width,color_scale)')

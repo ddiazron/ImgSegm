@@ -1,6 +1,6 @@
 [project]
 name = "imgsegmentationmq"
-version = "1.2.1"
+version = "1.2.2"
 authors = [
   {name="Daniel Díaz-Roncero González"},
 ]

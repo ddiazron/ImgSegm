@@ -49,8 +49,8 @@ def cmeans(k,image,m,max_it=100,init_centroids=None):
     if(m <= 1):
         raise ValueError('m must be greater than 1')
     
-    if(max_it <= 1):
-        raise ValueError('The number of maximum iterations must be greater than 1')
+    if(max_it <= 0):
+        raise ValueError('The number of maximum iterations must be greater than 0')
     
     if(len(image.shape) != 3):
         raise ValueError('The image must have 3 dimensions (length,width,color_scale)')
