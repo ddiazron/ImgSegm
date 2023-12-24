@@ -11,9 +11,9 @@ def cquantile(k,image,m,k1,k2, max_it=100, init_centroids=None):
         Number of clusters
     image: numpy.ndarray
         Numpy array representing the image for which to find some initial centroids.
-    m: int
-    k1: int
-    k2: int
+    m: int or float
+    k1: int or float
+    k2: int or float
     max_it: int
         Maximum number of iterations for the algorithm
     init_centroids: numpy.ndarray
@@ -31,14 +31,14 @@ def cquantile(k,image,m,k1,k2, max_it=100, init_centroids=None):
     if(type(k) != int):
         raise TypeError('k must be an integer')
        
-    if(type(k1) != int):
-        raise TypeError('k1 must be an integer')
+    if(type(k1) != int and type(k1) != float):
+        raise TypeError('k1 must be an integer or a float')
         
-    if(type(k2) != int):
-        raise TypeError('k2 must be an integer')
+    if(type(k2) != int and type(k2) != float):
+        raise TypeError('k2 must be an integer or a float')
     
-    if(type(m) != int):
-        raise TypeError('m must be an integer')
+    if(type(m) != int and type(m) != float):
+        raise TypeError('m must be an integer or a float')
         
     if(type(max_it) != int):
         raise TypeError('max_it must be an integer')

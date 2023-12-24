@@ -12,7 +12,7 @@ def cmeans_centroid(image, pxl_classes, clusters, m):
         Numpy array representing the membership of each pixel to the different clusters.
     clusters: int
         Number of clusters
-    m: int
+    m: int or float
         Weighting exponent
     
     Returns
@@ -25,8 +25,8 @@ def cmeans_centroid(image, pxl_classes, clusters, m):
     if(type(clusters) != int):
         raise TypeError('clusters must be an integer')
     
-    if(type(m) != int):
-        raise TypeError('m must be an integer')
+    if(type(m) != int and type(m) != float):
+        raise TypeError('m must be an integer or a float')
     
     if(type(image) != np.ndarray):
         raise TypeError('image must be a numpy.ndarray')   
@@ -71,7 +71,7 @@ def cmeans_pxl_classes(image,centroids,clusters,m):
         Numpy array representing the centroids of the clusters.
     clusters: int
         Number of clusters
-    m: int
+    m: int or float
         Weighting exponent
     
     Returns
@@ -84,8 +84,8 @@ def cmeans_pxl_classes(image,centroids,clusters,m):
     if(type(clusters) != int):
         raise TypeError('clusters must be an integer')
     
-    if(type(m) != int):
-        raise TypeError('m must be an integer')
+    if(type(m) != int and type(m) != float):
+        raise TypeError('m must be an integer or a float')
     
     if(type(image) != np.ndarray):
         raise TypeError('image must be a numpy.ndarray')   

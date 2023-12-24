@@ -9,8 +9,8 @@ def generalizedManhattan(x,y,k1,k2):
     ----------
     x: numpy.ndarray
     y: numpy.ndarray
-    k1: int
-    k2: int
+    k1: int or float
+    k2: int or float
 
     Returns
     -------
@@ -19,11 +19,11 @@ def generalizedManhattan(x,y,k1,k2):
     
     '''
     # TypeErrors  
-    if(type(k1) != int):
-        raise TypeError('k1 must be an integer')
-    
-    if(type(k2) != int):
-        raise TypeError('k2 must be an integer')
+    if(type(k1) != int and type(k1) != float):
+        raise TypeError('k1 must be an integer or a float')
+        
+    if(type(k2) != int and type(k2) != float):
+        raise TypeError('k2 must be an integer or a float')
     
     if(type(x) != np.ndarray):
         raise TypeError('x must be a numpy.ndarray')   
@@ -63,10 +63,10 @@ def cquantile_centroid(image, pxl_classes, clusters, m, k1, k2):
         Numpy array representing the cluster to which each pixel of the original image belongs.
     clusters: int
         Number of clusters
-    m: int
+    m: int or float
         Weighting exponent
-    k1: int
-    k2: int
+    k1: int or float
+    k2: int or float
     
     Returns
     -------
@@ -78,14 +78,14 @@ def cquantile_centroid(image, pxl_classes, clusters, m, k1, k2):
     if(type(clusters) != int):
         raise TypeError('k must be an integer')
        
-    if(type(k1) != int):
-        raise TypeError('k1 must be an integer')
+    if(type(k1) != int and type(k1) != float):
+        raise TypeError('k1 must be an integer or a float')
         
-    if(type(k2) != int):
-        raise TypeError('k2 must be an integer')
+    if(type(k2) != int and type(k2) != float):
+        raise TypeError('k2 must be an integer or a float')
     
-    if(type(m) != int):
-        raise TypeError('m must be an integer')
+    if(type(m) != int and type(m) != float):
+        raise TypeError('m must be an integer or a float')
     
     if(type(image) != np.ndarray):
         raise TypeError('image must be a numpy.ndarray')   
@@ -98,7 +98,7 @@ def cquantile_centroid(image, pxl_classes, clusters, m, k1, k2):
         raise ValueError('The number of clusters must be greater than 0')
         
     if(k1 <= 0 or k2 <= 0):
-        raise ValueError('k1 and k2 must be greater than 1')
+        raise ValueError('k1 and k2 must be greater than 0')
         
     if(m <= 1):
         raise ValueError('m must be greater than 1')
@@ -150,10 +150,10 @@ def cquantile_pxl_classes(image,centroids,clusters,m,k1,k2):
         Numpy array representing the centroids.
     clusters: int
         Number of clusters
-    m: int
+    m: int or float
         Weighting exponent
-    k1: int
-    k2: int
+    k1: int or float
+    k2: int or float
     
     Returns
     -------
@@ -165,14 +165,14 @@ def cquantile_pxl_classes(image,centroids,clusters,m,k1,k2):
     if(type(clusters) != int):
         raise TypeError('clusters must be an integer')
        
-    if(type(k1) != int):
-        raise TypeError('k1 must be an integer')
+    if(type(k1) != int and type(k1) != float):
+        raise TypeError('k1 must be an integer or a float')
         
-    if(type(k2) != int):
-        raise TypeError('k2 must be an integer')
+    if(type(k2) != int and type(k2) != float):
+        raise TypeError('k2 must be an integer or a float')
     
-    if(type(m) != int):
-        raise TypeError('m must be an integer')
+    if(type(m) != int and type(m) != float):
+        raise TypeError('m must be an integer or a float')
     
     if(type(image) != np.ndarray):
         raise TypeError('image must be a numpy.ndarray')   
