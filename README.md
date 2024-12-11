@@ -12,7 +12,7 @@ To install the package in Windows, execute the following command:
 
 py -m pip install imgsegmentationmq
 
-# Importing and uding the package
+# Importing and using the package
 
 To import the package to your python script run the following line:
 
